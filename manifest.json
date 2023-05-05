@@ -1,0 +1,22 @@
+{
+    "name": "Five.me blur disabler",
+    "description": "disables blur on answer.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "https://five.me/*"
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://five.me/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
